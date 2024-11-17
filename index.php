@@ -77,9 +77,9 @@ button:hover {
         <h1>سیستم مدیریت وظایف</h1>
         <nav>
             <ul>
-                <li><a href="#">صفحه اصلی</a></li>
-                <li><a href="#">درباره ما</a></li>
-                <li><a href="#">تماس با ما</a></li>
+                <li><a href="index.php">صفحه اصلی</a></li>
+                <li><a href="my.php">درباره ما</a></li>
+                <li><a href="callme.php">تماس با ما</a></li>
             </ul>
         </nav>
     </header>
