@@ -70,6 +70,7 @@ button:hover {
     background-color: #45a049;
 }
 
+
     </style>
 </head>
 <body>
@@ -80,6 +81,8 @@ button:hover {
                 <li><a href="index.php">صفحه اصلی</a></li>
                 <li><a href="my.php">درباره ما</a></li>
                 <li><a href="callme.php">تماس با ما</a></li>
+                <li><a href="weblog.php">وبلاگ</a></li>
+
             </ul>
         </nav>
     </header>
