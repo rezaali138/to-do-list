@@ -1,115 +1,53 @@
+<?php
+session_start();
+
+$valid_username = 'reza';
+$valid_password = '1386';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($username === $valid_username && $password === $valid_password) {
+        header("Location: home.php");
+        exit();
+    } else {
+        $error = "نام کاربری یا رمز عبور نادرست است.";
+    }
+}
+?>
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدیریت وظایف</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.container {
-    display: flex;
-}
-
-.sidebar {
-    width: 25%;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-main {
-    width: 75%;
-    padding: 20px;
-}
-
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-h2 {
-    color: #333;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-    </style>
 </head>
 <body>
-    <header>
-        <h1>سیستم مدیریت وظایف</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">صفحه اصلی</a></li>
-                <li><a href="my.php">درباره ما</a></li>
-                <li><a href="callme.php">تماس با ما</a></li>
-                <li><a href="weblog.php">وبلاگ </a></li>
+    <div class="wrapper">
+        <form method="POST" action="">
+            <h1>Login</h1>
+            <div class="input-bux">
+                <input type="text" placeholder="Username" id="username" name="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-bux">
+                <input type="password" placeholder="Password" id="password" name="password" required>
+                <i class='bx bxs-lock'></i>
 
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="container">
-        
-        <main>
-            <h2>وظایف جاری</h2>
-            <ul>
-                <li>وظیفه ۱</li>
-                <li>وظیفه ۲</li>
-                <li>وظیفه ۳</li>
-            </ul>
-            <button>اضافه کردن وظیفه جدید</button>
-        </main>
-        <aside class="sidebar">
-            <h2>منوی کناری</h2>
-            <ul>
-                <li><a href="#">وظایف من</a></li>
-                <li><a href="#">وظایف تکمیل شده</a></li>
-                <li><a href="#">ایجاد وظیفه جدید</a></li>
-            </ul>
-        </aside>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me </label>
+                <a href="#">Forgot password ?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="sign-up">
+                <p>Don't have an account?<a href="#">Register</a></p>
+            </div>
+        </form>
     </div>
-
-    <footer>
-        <p>&copy; 2023 سیستم مدیریت وظایف. تمام حقوق محفوظ است.</p>
-    </footer>
-
 </body>
 </html>
