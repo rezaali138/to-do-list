@@ -34,7 +34,7 @@
                     <a class="nav-link" href="aboutme.php">درباره ما</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">خانه</a>
+                    <a class="nav-link" href="home.php">خانه</a>
                 </li>
             </ul>
         </div>
