@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="reza.css">
     <style>
-        p,h3{
+        p,h3,h2{
             text-align: center;
             align-items: center;
+        }
+        h4{
+            text-align: right;
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -27,6 +31,9 @@
         </button>
         <div class="" id="navbarNav">
             <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="wablog.php">وبلاگ</a>
+                </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="connectme.php">تماس با ما</a>
                 </li>
